@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="left">
+        <div class="Calculator">
+          <input class="input1" value="" id="subVal" type="text" disabled /><br />
+          <input class="input" type="text" placeholder="0" id="inputVal" />
+  
+          <div>
+            <button onclick="clearAll('AC')" class="operator">AC</button>
+            <button onclick="deletelast('DEL')" class="operator">DEL</button>
+            <button onclick="getValue('%')" class="operator">%</button>
+            <button onclick="getValue('/')" class="operator">/</button>
+          </div>
+          <div>
+            <button onclick="getValue('7')">7</button>
+            <button onclick="getValue('8')">8</button>
+            <button onclick="getValue('9')">9</button>
+            <button onclick="getValue('*')" class="operator">*</button>
+          </div>
+          <div>
+            <button onclick="getValue('4')">4</button>
+            <button onclick="getValue('5')">5</button>
+            <button onclick="getValue('6')">6</button>
+            <button onclick="getValue('-')" class="operator">-</button>
+          </div>
+          <div>
+            <button onclick="getValue('1')">1</button>
+            <button onclick="getValue('2')">2</button>
+            <button onclick="getValue('3')">3</button>
+            <button onclick="getValue('+')" class="operator">+</button>
+          </div>
+          <div>
+            <button id="toggleButton" onclick="myHistory('H')">H</button>
+            <button onclick="getValue('0')">0</button>
+            <button onclick="getValue('.')">.</button>
+            <button onclick="solve()" class="equalBtn">=</button>
+          </div>
+        </div>
+  
+        <div class="right">
+          <div>
+            <h1>HISTORY</h1>
+            <hr />
+          </div>
+          <div id="history">
+            <div id="his"></div>
+          </div>
+          <button class="clearBtn" onclick="clearHistory()">clear all</button>
+        </div>
+      </div>
+
+
+      <script src="script.js"></script>
+</body>
+</html>
